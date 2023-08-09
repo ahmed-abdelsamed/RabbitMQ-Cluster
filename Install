@@ -23,7 +23,7 @@ check IP:15678
 
 
 rabbitmqctl add_user admin admin 
-rabbitmqctl set_user_tags admin adminstrator,management
+rabbitmqctl set_user_tags admin administrator,management
 
 #change password admin
 rabbitmqctl change_password admin  Password@12 
