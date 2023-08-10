@@ -186,10 +186,10 @@ REM #" Configuration "
 set ERLANG_HOME=C:\Program Files\Erlang OTP
 set ErLANG_SERVICE_MANAGER_PATH=C:\Program Files\Erlang OTP\erts-13.2.2\bin
 set RABBITMQ_NODE_PORT=5672
-set RABBITMQ_NODENAME=rabbit1@node01
-set RABBITMQ_BASE=C:\rabbitmq_server-3.12.2
+set RABBITMQ_NODENAME=rabbit1@rmq-node1
+set RABBITMQ_BASE=D:\RabbitMQ\rabbitmq_server-3.12.2
 set RABBITMQ_SERVER_START_ARGS="-rabbitmq_management_listener [{port,15678}]"
-set RABBITMQ_MNESIA_DIR=C:\tmp\rabbit1\data
-set RABBITMQ_LOG_BASE=C:\tmp\rabbit1\logs
-set RABBITMQ_CONFIG_FILE=C:\rabbitmq_server-3.12.2\config\rabbitmq.conf
-set RABBITMQ_ENABLED_PLUGINS_FILE=C:\tmp\rabbit1\enabled_plugins
+set RABBITMQ_MNESIA_DIR=D:\RabbitMQ\tmp\rabbit1\data
+set RABBITMQ_LOG_BASE=D:\RabbitMQ\tmp\rabbit1\logs
+set RABBITMQ_CONFIG_FILE=D:\RabbitMQ\rabbitmq_server-3.12.2\config\rabbitmq.conf
+set RABBITMQ_ENABLED_PLUGINS_FILE=D:\RabbitMQ\tmp\rabbit1\enabled_plugins
