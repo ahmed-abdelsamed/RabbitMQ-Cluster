@@ -1,0 +1,34 @@
+openssl genrsa -out key.pem 2048
+
+#Create Password###openssl genrsa -aes256 -out key.pem 2048
+
+
+openssl req -new -key key.pem -out signreq.csr
+
+openssl x509 -req -days 365 -in signreq.csr -signkey key.pem -out certificate.pem
+
+openssl x509 -text -noout -in certificate.pem
+=====================================================
+# Modified  rabbitmq.conf
+#Uncomment the following lines:
+ssl_options.cacertfile
+ssl_options certfile
+ssl_options.keyfile
+num_acceptors.ssl
+listeners.ssl.default
+
+#Modify the entries for management.* interface.
+
+Note that paths are absolute and use forward slashes.
+
+#Comment the following lines:
+management.tcp.port
+management.tcp.ip
+
+#Uncomment the following lines:
+management.ssl.port
+management.ssl.cacertfile
+management.ssl.certfile
+management.ssl.keyfile
+management.ssl.versions.1
+management.ssl.versions.2
