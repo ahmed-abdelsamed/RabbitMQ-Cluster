@@ -56,10 +56,18 @@ rabbitmqctl list_policies
 And if you want to remove the policy, use the following command.
 rabbitmqctl clear_policy ha-two
 ---
-######### Restart Cluster
+######### Prepare Cluster
 ./rabbitmq-service stop
 ./rabbitmq-env
 ./rabbitmq-service install
-./rabbitmq-server 
+./rabbitmq-server -detached
 ./rabbitmqctl  start_app
+
+### Cluster Restart
+./rabbitmq-service stop
+./rabbitmq-server -detached
+./rabbitmqctl  start_app
+
+
+
 
