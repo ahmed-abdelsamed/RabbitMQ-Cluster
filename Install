@@ -70,12 +70,17 @@ rabbitmqctl clear_policy ha-two
 
 # or script powershell
 ## Powershell
+---
+## Powershell
 cd D:\RabbitMQ\rabbitmq_server-3.12.2\sbin
+./rabbitmqctl  stop_app
 .\rabbitmqctl.bat stop
 Start-Sleep -s 15
+./rabbitmq-env
 ./rabbitmq-server -detached
-Start-Sleep -s 15
+Start-Sleep -s 20
 ./rabbitmqctl  start_app
+---
 
 
 
